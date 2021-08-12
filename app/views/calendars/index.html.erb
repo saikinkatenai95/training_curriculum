@@ -4,6 +4,7 @@
     <%= f.label :予定を入力, class: 'lavel' %>
     <%= f.text_field :plan, class: 'text-input' %>
     <%= f.submit '保存' %>
+<<<<<<< HEAD
 <% end %>
 <div class='calendar'>
   <% @week_days.each do |day| %>
@@ -20,4 +21,24 @@
       </ul>
     </div>
   <% end %>
+=======
+  <% end %>
+</div>
+<div>
+  <div class='calendar'>
+    <% @week_days.each do |day| %>
+      <div class='item'>
+        <div class='date'>
+          <%= day[:month] %>/<%= day[:date] %><%= day[:wday]%>
+        </div>
+        <ul class='content'>
+        <% if day[:plans].length != 0 %>
+          <% day[:plans].each do |plan| %>
+            <li class='plan-list'>・<%= plan %></li>
+          <% end %>
+        <% end %>
+      </ul>
+    </div>
+      <% end %>
+>>>>>>> 424b7672521d55276af3953b6ebe4c0fa07e78c5
 </div>
